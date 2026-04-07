@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA — Modern Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">NOVA</a>
+      <nav class="nav">
+        <a href="#new">신상품</a>
+        <a href="#men">남성</a>
+        <a href="#women">여성</a>
+        <a href="#sale">SALE</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="검색">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="찜">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="장바구니">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="메뉴">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <input type="text" placeholder="상품을 검색하세요..." id="searchInput" />
+      <button class="icon-btn" onclick="doSearch()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#new">신상품</a>
+    <a href="#men">남성</a>
+    <a href="#women">여성</a>
+    <a href="#sale">SALE</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-tag">2026 SS Collection</span>
+      <h1 class="hero-title">새로운 계절,<br />새로운 스타일</h1>
+      <p class="hero-sub">트렌드를 앞서가는 감각적인 컬렉션을 만나보세요</p>
+      <div class="hero-btns">
+        <a href="#new" class="btn btn-primary">지금 쇼핑하기</a>
+        <a href="#sale" class="btn btn-outline">SALE 보기</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80" alt="hero fashion" />
+        <div class="hero-badge">NEW<br/>IN</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>FREE SHIPPING OVER 50,000원</span><span>·</span>
+      <span>신규 회원 10% 할인</span><span>·</span>
+      <span>당일 배송 가능</span><span>·</span>
+      <span>FREE SHIPPING OVER 50,000원</span><span>·</span>
+      <span>신규 회원 10% 할인</span><span>·</span>
+      <span>당일 배송 가능</span><span>·</span>
+      <span>FREE SHIPPING OVER 50,000원</span><span>·</span>
+      <span>신규 회원 10% 할인</span><span>·</span>
+      <span>당일 배송 가능</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="categories section">
+    <div class="container">
+      <h2 class="section-title">카테고리</h2>
+      <div class="cat-grid">
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400&q=80')">
+          <span>아우터</span>
+        </div>
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&q=80')">
+          <span>티셔츠</span>
+        </div>
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80')">
+          <span>슈즈</span>
+        </div>
+        <div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80')">
+          <span>액세서리</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS — NEW -->
+  <section class="products section" id="new">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">신상품</h2>
+        <div class="filter-tabs">
+          <button class="tab active" data-filter="all">전체</button>
+          <button class="tab" data-filter="men">남성</button>
+          <button class="tab" data-filter="women">여성</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <section class="banner-section">
+    <div class="banner-content">
+      <p class="banner-label">LIMITED OFFER</p>
+      <h2>멤버십 가입하고<br/>20% 추가 혜택 받기</h2>
+      <a href="#" class="btn btn-white">지금 가입하기</a>
+    </div>
+  </section>
+
+  <!-- SALE PRODUCTS -->
+  <section class="products section" id="sale">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">SALE <span class="sale-tag">Up to 50%</span></h2>
+      </div>
+      <div class="product-grid" id="saleGrid"></div>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>장바구니</h3>
+      <button class="icon-btn" id="closeCart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">장바구니가 비어있어요</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>합계</span>
+        <span id="cartTotal">0원</span>
+      </div>
+      <button class="btn btn-primary full-width">결제하기</button>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="logo">NOVA</p>
+        <p>트렌디한 라이프스타일을 위한<br/>패션 플랫폼</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>쇼핑</h4>
+        <a href="#">신상품</a>
+        <a href="#">남성</a>
+        <a href="#">여성</a>
+        <a href="#">SALE</a>
+      </div>
+      <div class="footer-links">
+        <h4>고객지원</h4>
+        <a href="#">공지사항</a>
+        <a href="#">FAQ</a>
+        <a href="#">배송 안내</a>
+        <a href="#">반품 정책</a>
+      </div>
+      <div class="footer-links">
+        <h4>회사</h4>
+        <a href="#">브랜드 스토리</a>
+        <a href="#">채용</a>
+        <a href="#">제휴 문의</a>
+        <a href="#">개인정보처리방침</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NOVA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
