@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
     SELECT
       p.id, p.name, p.brand, p.price, p.sale_price, p.is_new, p.stock,
       c.name AS category_name, c.slug AS category_slug,
-      i.url  AS thumbnail,
+      ANY_VALUE(i.url) AS thumbnail,
       ROUND(AVG(r.rating), 1) AS avg_rating,
       COUNT(DISTINCT r.id)    AS review_count,
       ROUND((1 - p.sale_price / p.price) * 100) AS discount_pct
@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
     LEFT JOIN product_images i ON i.product_id = p.id AND i.is_thumbnail = 1
     LEFT JOIN reviews r ON r.product_id = p.id AND r.is_active = 1
     WHERE ${where.join(' AND ')}
-    GROUP BY p.id
+    GROUP BY p.id, p.name, p.brand, p.price, p.sale_price, p.is_new, p.stock, c.name, c.slug
     ORDER BY ${orderBy}
     LIMIT ? OFFSET ?
   `;
